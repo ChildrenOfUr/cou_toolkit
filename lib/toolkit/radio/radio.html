@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<link rel="import" href="../../../../packages/polymer/polymer.html">
+<link rel="import" href="../../../../packages/paper_elements/paper_radio_button.html">
+<link rel="import" href="../fonts/fonts.html">
+<link rel="import" href="../default_style.html">
+
+<polymer-element name="ur-radio" attributes="label">
+    <template>
+        <link rel="stylesheet" href="radio.css">
+        <core-style ref="default"></core-style>
+        <paper-radio-button label="{{label}}"></paper-radio-button>
+    </template>
+    <script type="application/dart" src="radio.dart"></script>
+</polymer-element>

@@ -1,0 +1,25 @@
+paper-radio-button::shadow #ink[checked] {
+    color: #4b2e4c;
+}
+paper-radio-button::shadow #onRadio {
+    background-color: #4b2e4c;
+}
+paper-radio-button[checked]::shadow #offRadio {
+    border-color: #4b2e4c;
+}
+paper-radio-button::shadow #ink {
+    color: rgba(75, 46, 76, 0.38);
+}
+paper-radio-button::shadow #offRadio {
+    border-color: rgba(75, 46, 76, 0.38);
+}
+
+paper-radio-button /deep/ #radioContainer {
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 5px;
+}
+paper-radio-button /deep/ #radioLabel {
+    display: block;
+    margin-left: 0;
+}
