@@ -3,7 +3,7 @@
 <link rel="import" href="../fonts/fonts.html">
 <link rel="import" href="../default_style.html">
 
-<polymer-element name="ur-button" attributes="theme big" noscript>
+<polymer-element name="ur-button" attributes="theme big darkui" noscript>
     <template>
 
         <core-style ref="default"></core-style>
@@ -58,8 +58,17 @@
                 background-color: #fff;
             }
 
+            button.light[darkui="true"] {
+                background-color: #282828;
+            }
+
             button.light, button.light * {
                 color: #4b2e4c;
+            }
+
+            button.light[darkui="true"],
+            button.light[darkui="true"] * {
+                color: #eee;
             }
 
             button[big="true"] {
@@ -67,7 +76,7 @@
             }
 
         </style>
-        <button class="{{theme}}{{size}}" big="{{big}}">
+        <button class="{{theme}}{{size}}" big="{{big}}" darkui="{{darkui}}">
             <content></content>
         </button>
     </template>
