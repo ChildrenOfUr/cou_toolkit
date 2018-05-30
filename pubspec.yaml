@@ -3,11 +3,11 @@ version: 0.1.7
 description: A polymer library of components for use with CoU applications
 
 dependencies:
-  browser: ">=0.10.0+2 <0.11.0"
-  polymer: ">=0.16.1+4 <0.17.0"
-  paper_elements: ">=0.7.1 <0.8.0"
-  dnd: ">=0.3.0 <0.4.0"
+  browser: any
+  angular: "^4.0.0+2"
+  dnd: "^0.4.0"
 
 transformers:
-- polymer:
-    entry_points: web/index.html
+- angular:
+   entry_points:
+      - web/main.dart

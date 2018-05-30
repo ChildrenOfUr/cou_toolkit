@@ -1,90 +1,110 @@
 <!DOCTYPE html>
 
 <html>
-  <head>
-  	<meta charset="utf-8">
-  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>toolkit</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>toolkit</title>
 
-    <link rel="import" href="packages/cou_toolkit/toolkit/toolkit.html">
+	<style>
+		html {
+			margin: 0;
+			height: 100%;
+		}
 
-  </head>
-  <body unresolved>
+		body {
+			margin: 0;
+			padding: 20px;
+			background: linear-gradient(to bottom, #eee, #aaa);
+		}
+	</style>
 
-    Drag Me. <br>
-    <ur-itembox
-    item="http://c2.glitch.bz/items/2012-12-06/cherry__x1_iconic_png_1354829757.png"
-    quantity="10">
-    </ur-itembox>
+	<link rel="import" href="fonts.html" />
 
-    <ur-itembox
-    item="http://c2.glitch.bz/items/2012-12-06/cherry__x1_iconic_png_1354829757.png"
-    quantity="1">
-    </ur-itembox>
+	<link rel="stylesheet" href="packages/cou_toolkit/styles/button.css" />
+	<link rel="stylesheet" href="packages/cou_toolkit/styles/panel.css" />
+	<link rel="stylesheet" href="packages/cou_toolkit/styles/progress.css" />
+	<link rel="stylesheet" href="packages/cou_toolkit/styles/slider.css" />
+	<link rel="stylesheet" href="packages/cou_toolkit/styles/well.css" />
+</head>
+<body>
 
-    <ur-itembox>
-    </ur-itembox>
+Drag Me.<br>
 
-    <ur-itembox
-    item="http://www.clker.com/cliparts/9/e/4/2/119542278093319550johnny_automatic_potatoes.svg"
-    quantity="100">
-    </ur-itembox>
+<ur-itembox item="http://c2.glitch.bz/items/2012-12-06/cherry__x1_iconic_png_1354829757.png" quantity="10"></ur-itembox>
 
-    <br><br>
+<ur-itembox item="http://c2.glitch.bz/items/2012-12-06/cherry__x1_iconic_png_1354829757.png" quantity="1"></ur-itembox>
 
-	<ur-slider></ur-slider>
+<ur-itembox></ur-itembox>
 
-    <br><br>
+<ur-itembox item="http://www.clker.com/cliparts/9/e/4/2/119542278093319550johnny_automatic_potatoes.svg" quantity="100"></ur-itembox>
 
-	<ur-button>Button</ur-button>
-    <ur-button><i class="fa fa-bicycle"></i></ur-button>
-    <ur-button>MORE BUTTON</ur-button>
-    <ur-button big="true">BIG BUTTON</ur-button>
+<br><br>
 
-    <br><br>
+<label>
+	Slider<br>
+	<input type="range" min="0" max="1" step="0.1" value="0.5" id="inputRange" />
+</label>
 
-    <ur-button theme="light">Button</ur-button>
-    <ur-button theme="light"><i class="fa fa-bicycle"></i></ur-button>
-    <ur-button theme="light">MORE BUTTON</ur-button>
-    <ur-button theme="light" big="true">BIG BUTTON</ur-button>
+<br><br>
 
-    <br><br>
+<button>Button</button>
+<button><i class="fa fa-bicycle"></i></button>
+<button>MORE BUTTON</button>
+<button class="btn-big">BIG BUTTON</button>
 
-    <ur-button theme="warn">Button</ur-button>
-    <ur-button theme="warn"><i class="fa fa-bicycle"></i></ur-button>
-    <ur-button theme="warn">MORE BUTTON</ur-button>
-    <ur-button theme="warn" big="true">BIG BUTTON</ur-button>
+<br><br>
 
-    <br><br>
+<button class="btn-light">Button</button>
+<button class="btn-light"><i class="fa fa-bicycle"></i></button>
+<button class="btn-light">MORE BUTTON</button>
+<button class="btn-light btn-big">BIG BUTTON</button>
 
-    <ur-button theme="success">Button</ur-button>
-    <ur-button theme="success"><i class="fa fa-bicycle"></i></ur-button>
-    <ur-button theme="success">MORE BUTTON</ur-button>
-    <ur-button theme="success" big="true">BIG BUTTON</ur-button>
+<br><br>
 
-    <br><br>
+<button class="btn-warn">Button</button>
+<button class="btn-warn"><i class="fa fa-bicycle"></i></button>
+<button class="btn-warn">MORE BUTTON</button>
+<button class="btn-warn btn-big">BIG BUTTON</button>
 
-    <ur-button theme="light" darkui="true">Button</ur-button>
-    <ur-button theme="light" darkui="true"><i class="fa fa-bicycle"></i></ur-button>
-    <ur-button theme="light" darkui="true">MORE BUTTON</ur-button>
-    <ur-button theme="light" darkui="true" big="true">BIG BUTTON</ur-button>
+<br><br>
 
-    <br><br>
+<button class="btn-success">Button</button>
+<button class="btn-success"><i class="fa fa-bicycle"></i></button>
+<button class="btn-success">MORE BUTTON</button>
+<button class="btn-success btn-big">BIG BUTTON</button>
 
-    <ur-well>Place Text into a well</ur-well>
+<br><br>
 
-    <br><br>
+<button class="btn-light" darkui="true">Button</button>
+<button class="btn-light" darkui="true"><i class="fa fa-bicycle"></i></button>
+<button class="btn-light" darkui="true">MORE BUTTON</button>
+<button class="btn-light btn-big" darkui="true">BIG BUTTON</button>
 
-    <ur-panel>
-      Or in a Panel
-      <ur-button>Panel Button</ur-button>
+<br><br>
 
-    </ur-panel>
+<div class="well">Place Text into a well</div>
 
-    <br><br>
+<br><br>
 
-    <ur-progress percent="75" status="Loading..."></ur-progress>
+<div class="panel">
+	Or in a Panel
+	<button>Panel Button</button>
+</div>
 
-    <script type="application/dart">export 'package:polymer/init.dart';</script>
-  </body>
+<br><br>
+
+<div class="progress">
+	<progress value="0.5" id="outputProgress"></progress>
+	<label for="outputProgress">50% loaded</label>
+</div>
+<br>
+<div class="progress">
+	<progress value="0.5" id="outputNotProgress"></progress>
+	<label for="outputNotProgress">50% unloaded</label>
+</div>
+
+<script type="application/dart" src="main.dart"></script>
+<script src="packages/browser/dart.js"></script>
+</body>
 </html>
