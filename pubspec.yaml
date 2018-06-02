@@ -4,10 +4,3 @@ description: A polymer library of components for use with CoU applications
 
 dependencies:
   browser: any
-  angular: "^4.0.0+2"
-  dnd: "^0.4.0"
-
-transformers:
-- angular:
-   entry_points:
-      - web/main.dart

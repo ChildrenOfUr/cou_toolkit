@@ -1,13 +1,6 @@
 import 'dart:html';
 
-import 'package:angular/angular.dart';
-
-import 'package:cou_toolkit/toolkit/itembox/itembox.dart';
-
 void main() {
-	bootstrap(UrItemBox);
-	print("bootstrap OK");
-
 	sliderBars();
 	print("main OK");
 }
